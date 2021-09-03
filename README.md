@@ -5,6 +5,9 @@ This Lookml project is based on the 8 Period Over Period Analysis Methods publis
 
 Currently this project contains PoP for Redshift, Snowflake, Bigquery and MySQL. More dialects might be added in the future.
 
+## How to use this repo:
+Similar to how you get the code from the Looker help center, you can directly copy and paste the code in your Lookml project, they you can replace the SQL field based on your table. Since the code has been adapted based on each dialect, customizing the SQL syntax would be optional.
+
 ### Current limitations:
 Method 1 - Method 7 for all project are working, Method 8 for Snowflake and MySQL still needs more improvement
 
