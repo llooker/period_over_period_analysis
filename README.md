@@ -9,4 +9,4 @@ Currently this project contains PoP for Redshift, Snowflake, Bigquery and MySQL.
 Method 1 - Method 7 for all project are working, Method 8 for Snowflake and MySQL still needs more improvement
 
 ## Support
-This project is open source, if you encounter any issues or want to share any feedback for this project, please raise an issue in this repo, Looker support team is not responsible for maintaining and supporting this repo.
+This project is open source, if you encounter any issues or want to share any feedback about this project, please raise an issue in this repo. Looker support team is not responsible for maintaining and supporting this repo.
