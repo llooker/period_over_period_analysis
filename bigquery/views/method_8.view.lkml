@@ -155,7 +155,7 @@ parameter: over_period_type {
 #convert_tz: no
 #type: nothing <-- just right
     sql: DATE_TRUNC(
-    DATE_ADD({% date_end pop.date_filter %}, INTERVAL 0 - ${within_periods.n} {% parameter pop.within_period_type %})
+    DATE_ADD(DATE({% date_end pop.date_filter %}), INTERVAL 0 - ${within_periods.n} {% parameter pop.within_period_type %})
     , {% parameter pop.within_period_type %});;
   }
 
