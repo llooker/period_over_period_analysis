@@ -15,7 +15,7 @@ Method 1 - Method 7 for all project are working, Method 8 for Snowflake and MySQ
 This project is open source, if you encounter any issues or want to share any feedback about this project, please raise an issue in this repo. Looker support team is not responsible for maintaining and supporting this repo.
 
 Contributors:
-[Won](https://github.com/wonkyounglooker)
-[Flavia](https://github.com/flavialooker)
-[Kento](https://github.com/kentomine)
-[Xin](https://github.com/xin-looker)
+- [Won](https://github.com/wonkyounglooker)
+- [Flavia](https://github.com/flavialooker)
+- [Kento](https://github.com/kentomine)
+- [Xin](https://github.com/xin-looker)
