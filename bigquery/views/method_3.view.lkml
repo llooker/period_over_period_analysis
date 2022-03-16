@@ -95,9 +95,9 @@ view: pop_parameters {
     {% if current_date_range._is_filtered %}
         CASE
         WHEN {% condition current_date_range %} ${created_raw} {% endcondition %}
-        THEN DATE_DIFF( DATE({% date_start current_date_range %}), ${created_date}, DAY) + 1
-        WHEN ${created_date} between ${period_2_start} and ${period_2_end}
-        THEN DATE_DIFF(${period_2_start}, ${created_date}, DAY) + 1
+        THEN DATE_DIFF( DATE({% date_start current_date_range %}), DATE(${created_date}), DAY) + 1
+        WHEN DATE(${created_date}) between ${period_2_start} and ${period_2_end}
+        THEN DATE_DIFF(${period_2_start}, DATE(${created_date}), DAY) + 1
         END
     {% else %} NULL
     {% endif %}
@@ -112,7 +112,7 @@ view: pop_parameters {
             CASE
             WHEN {% condition current_date_range %} ${created_raw} {% endcondition %}
             THEN 1
-            WHEN ${created_date} between ${period_2_start} and ${period_2_end}
+            WHEN DATE(${created_date}) between ${period_2_start} and ${period_2_end}
             THEN 2
             END
         {% else %}
@@ -165,7 +165,7 @@ view: pop_parameters {
             CASE
             WHEN {% condition current_date_range %} ${created_raw} {% endcondition %}
             THEN 'This {% parameter compare_to %}'
-            WHEN ${created_date} between ${period_2_start} and ${period_2_end}
+            WHEN DATE(${created_date}) between ${period_2_start} and ${period_2_end}
             THEN 'Last {% parameter compare_to %}'
             END
         {% else %}
@@ -185,7 +185,7 @@ view: pop_parameters {
         {% if current_date_range._is_filtered %}
             CASE
             WHEN {% condition current_date_range %} ${created_raw} {% endcondition %} THEN 'this'
-            WHEN ${created_date} between ${period_2_start} and ${period_2_end} THEN 'last' END
+            WHEN DATE(${created_date}) between ${period_2_start} and ${period_2_end} THEN 'last' END
         {% else %} NULL {% endif %} ;;
   }
 
@@ -215,4 +215,4 @@ view: pop_parameters {
     value_format_name: percent_2
   }
 
- }
+}
